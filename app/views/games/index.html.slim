@@ -1,0 +1,24 @@
+html
+  head
+    title Список игр
+  body
+  h1.mb-4 Игры:
+  div.container-fluid
+    table.table.table-hover.table-bordered
+      thead.thead-dark
+        tr
+          th ID
+          th Название
+          th Developer
+          th Publisher
+          th Продолжительность
+          th Описание
+      -@games.each do |game|
+        tbody
+          tr
+            td =game.id
+            td =game.name
+            td =game.developer.name
+            td =game.publisher.name
+            td =game.avg_length
+            td =game.description
